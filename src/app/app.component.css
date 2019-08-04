@@ -1,0 +1,33 @@
+/* a {
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  color: white;
+  text-decoration: none;
+}
+
+a::after,
+a::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #FFEB3B;
+  opacity: 0;
+  transition: .3s;
+}
+
+a:hover::before {
+  top: 0;
+  opacity: 1;
+}
+
+a:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+a:hover {
+  color: #FFEB3B;
+} */

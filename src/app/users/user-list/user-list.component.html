@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" style="flex-direction: column;display: flex;">
+      <button class="btn btn-primary btn-sm" (click)="openModal(add)"
+          style="padding: 10px; margin:10px auto;background-color: #512DA8;border-color: white"><i class="small material-icons">people</i> Add Contact </button>
+      <table class="table table-hover table-bordered text-center" style="margin-top: 30px;">
+        <thead class="thead-dark">
+          <tr>
+            <th><i class="small material-icons">face</i> Name</th>
+            <th><i class="small material-icons">phone_android</i> Mobile Number</th>
+            <th><i class="small material-icons">build</i> Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.mobile}}</td>
+            <td>
+              <button class="btn btn-warning" (click)="openModalEdit(edit,user)"> <i class="large material-icons">border_color</i></button> |
+              <button class="btn btn-danger" (click)="openModalDelete(delete,user._id)"><i class="large material-icons">delete_forever</i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #add>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Add Contact</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #myForm="ngForm">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="user.name" autocomplete="off">
+      <p class="text-danger">{{errorMsg.name}}</p>
+
+      <label for="mobile">Mobile</label>
+      <input type="number" ngModel pattern="^[6-9][0-9]{9}$" class="form-control" name="mobile" [(ngModel)]="user.mobile" autocomplete="off">
+      <p class="text-danger">{{errorMsg.mobile}}</p>
+
+      <button class="btn btn-primary" (click)="onSave()"[disabled]="!myForm.form.valid">Save</button>
+    </form>
+  </div>
+</ng-template>
+
+
+<ng-template #edit>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Edit Contact</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="editUser.name" autocomplete="off">
+      <p class="text-danger">{{errorMsg.name}}</p>
+
+      <label for="mobile">Mobile</label>
+      <input type="text" class="form-control" name="mobile" [(ngModel)]="editUser.mobile" autocomplete="off">
+      <p class="text-danger">{{errorMsg.mobile}}</p>
+
+      <button class="btn btn-primary" (click)="onUpdate()">Update</button>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #delete>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Confirm Delete</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure you want to delete this contact?</p>
+    <button (click)="modalRef.hide()" class="btn btn-info btn-sm"><i class="large material-icons">close</i></button> |
+    <button (click)="onDelete()" class="btn btn-danger btn-sm"><i class="large material-icons">check</i></button>
+  </div>
+</ng-template>

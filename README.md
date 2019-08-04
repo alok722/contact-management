@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. **This is a MEAN stack app, so before running 'ng serve' make sure you are running MongoDB and node js server in background. Database details can be found in server.js file**
 
 ## Code scaffolding
 

@@ -1,31 +1,54 @@
-# Demo
+<h1 align="center">welcome to contact-management 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-blue.svg" />
+</p>
 
-![](gif/contact_mean.gif)
+> contact management system - implementation of CRUD operation using MEAN stack.
 
-# Contact
+## 👀 demo
+![](demo/contact_mean.gif)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+## 🛠 usage
 
-## Development server
+### setting up back-end
+```sh
+$ git clone https://github.com/alok722/contact-management.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. **This is a MEAN stack app, so before running 'ng serve' make sure you are running MongoDB and node js server in background. Database details can be found in server.js file**
+$ cd backend
 
-## Code scaffolding
+$ npm i
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+$ npm run start
+```
 
-## Build
+### setting up front-end
+```sh
+$ git clone https://github.com/alok722/contact-management.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+$ cd frontend
 
-## Running unit tests
+$ npm i
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+$ npm run start
+```
 
-## Running end-to-end tests
+## 👤 author
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+ **Alok raj (alokr417@gmail.com)**
 
-## Further help
+* website: https://alokraj.tech/
+* github: [@alok722](https://github.com/alok722)
+* linkedin: [@alok722](https://linkedin.com/in/alok722)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 🤝 contributing
+
+contributions, issues and feature requests are welcome!
+
+## 🙌 show your support
+
+give a ⭐️ if this project helped you!
+
+
+***
